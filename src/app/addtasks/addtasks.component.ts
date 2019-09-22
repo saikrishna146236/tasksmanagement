@@ -20,6 +20,9 @@ export class AddtasksComponent implements OnInit {
   task_endDate;
   task_link;
   task_remarks;
+  alert: string = "none";
+  alertSuccess: string = "none";
+  message: string = "";
 
 
   constructor(private commonService: CommonService,private router:Router,
@@ -73,7 +76,9 @@ export class AddtasksComponent implements OnInit {
 
     this.addtasksService.saveTask(this.task).subscribe(suc => {
       console.log('After Saving', suc);
-      form.resetForm();  
+      form.resetForm();
+      this.alertSuccess ="block";
+      this.message = "Task Successfully Added";
     },
       err => {
         console.log(err);

@@ -130,10 +130,11 @@
       </div>-->
       <div class="text-center py-2">
         <button class="btn btn-success " type="submit" [disabled]="!taskForm.valid">Save Task</button>&nbsp;&nbsp;
-        
       </div>
-  
-    </div>
+  </div>
+  <div class="alert alert-success" [ngStyle]="{'display':alertSuccess}">
+    <div>{{message}}</div>
+  </div>
   
   </form>
   </div>

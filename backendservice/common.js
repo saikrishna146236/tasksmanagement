@@ -9,7 +9,7 @@ exports.gettasksTypes =function (request, response)
 {
   console.log("inside tasktypes")
   
-  data=['Hackathon','ML Competition','Others'];
+  data=['Hackathon','ML Competition','Hiring','Others'];
 
   response.json(data);  
 }

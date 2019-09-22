@@ -11,7 +11,6 @@ exports.getAllpastTaskManagementOperation = (app) => {
         mongoDbService.assets.find({endDate:{$lt:cutoff}})
             
             .sort({endDate:1})
-            .limit(10)
             .then(val => {
                 console.log(val);
                 response.json(val);

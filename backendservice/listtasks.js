@@ -11,7 +11,6 @@ exports.getAllTaskManagementOperation = (app) => {
         mongoDbService.assets.find({endDate:{$gte:cutoff}})
             
             .sort({endDate:1})
-            .limit(10)
             .then(val => {
                 console.log(val);
                 response.json(val);
